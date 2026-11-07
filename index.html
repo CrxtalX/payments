@@ -1,0 +1,159 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Payments</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 650px;
+    background: #111111;
+    border-radius: 12px;
+    padding: 45px 35px;
+    text-align: center;
+    color: white;
+    box-shadow: 0 15px 45px rgba(0,0,0,0.12);
+}
+
+h1 {
+    font-size: clamp(24px, 5vw, 32px);
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.subtitle {
+    color: #aaaaaa;
+    font-size: 14px;
+    margin-bottom: 38px;
+}
+
+.crypto-options {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.crypto {
+    background: #1c1c1c;
+    border: 1px solid #333333;
+    border-radius: 10px;
+    padding: 25px 10px;
+    cursor: pointer;
+    transition: 0.2s ease;
+    color: white;
+}
+
+.crypto:hover {
+    background: #292929;
+    border-color: #ffffff;
+    transform: translateY(-4px);
+}
+
+.crypto img {
+    width: 55px;
+    height: 55px;
+    object-fit: contain;
+    margin-bottom: 15px;
+}
+
+.crypto h3 {
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.crypto p {
+    color: #999999;
+    font-size: 12px;
+    margin-top: 6px;
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 35px 15px;
+    }
+
+    .crypto-options {
+        gap: 8px;
+    }
+
+    .crypto {
+        padding: 20px 5px;
+    }
+
+    .crypto img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .crypto h3 {
+        font-size: 12px;
+    }
+}
+</style>
+</head>
+
+<body>
+<div class="container">
+
+   
+
+    <div class="crypto-options">
+
+        <div class="crypto" onclick="selectBitcoin()">
+            <img src="/img/bitcoin.avif" alt="Bitcoin">
+            <h3>Bitcoin</h3>
+            <p>BTC</p>
+        </div>
+
+        <div class="crypto" onclick="selectEthereum()">
+            <img src="/img/etherium.png" alt="Ethereum">
+            <h3>Ethereum</h3>
+            <p>ETH</p>
+        </div>
+
+        <div class="crypto" onclick="selectMonero()">
+            <img src="/img/Monero_(cryptocurrency)-Logo.wine.svg" alt="Monero">
+            <h3>Monero</h3>
+            <p>XMR</p>
+        </div>
+
+    </div>
+
+</div>
+
+<script>
+
+function selectBitcoin() {
+    window.location.href = "bitcoin.html"
+}
+
+function selectEthereum() {
+    window.location.href = "etherium.html"
+}
+
+function selectMonero() {
+    window.location.href = "monero.html"
+}
+</script>
+
+</body>
+</html>
